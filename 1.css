@@ -730,8 +730,8 @@ footer.footer {
     height: 100%;
     z-index: 103;
     background-image: url("image/happy.jpg");
-    background-size: cover;
-    transition:  : 0.5s;
+    background-size: contain;
+    transition: .5s;
 }
 
 .happy::after, .happy::before {
