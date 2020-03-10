@@ -611,7 +611,7 @@ footer.footer {
     margin-top : 20px;
 }
 
-.submit button, .crush button {
+.submit button, .crush button, .happy button {
     width: 50px;
     height: 30px;
     font-size: 20px;
@@ -624,7 +624,7 @@ footer.footer {
     outline : none;
 }
 
-.submit button:hover, .crush button:hover {
+.submit button:hover, .crush button:hover, .happy button {
     color : #ff4757;
 }
 
@@ -683,7 +683,7 @@ footer.footer {
     transition: 0.5s;
 }
 
-.crush button {
+.crush button, .happy button {
     width: max-content;
     padding: 5px;
 }
@@ -729,32 +729,46 @@ footer.footer {
     width: 100%;
     height: 100%;
     z-index: 103;
-    background-image: url("image/happy.jpg");
-    background-size: contain;
+    /*background-image: url("image/happy.jpg");*/
+    /*background-size: contain;*/
     transition: .5s;
 }
 
 .happy::after, .happy::before {
     content: "Lê Quỳnh Tiên";
     position : absolute;
-    top: 68%;
+    top: 81%;
     left : 50%;
     transform : translateX(-50%);
     font-size: 60px;
     color : white;
+    width: max-content;
 }
 
 .happy::before {
     content: "18/03/1998 - 18/03/2020";
-    top: 75%;
+    top: 90%;
+    width: max-content;
     width: max-content;
 }
 
-.happy p {
+.happy .button{
     position: absolute;
     left: 50%;
-    top: 23%;
+    top: 10%;
     transform: translateX(-50%);
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width : 700px) {
+    .happy::after, .happy::before {
+        font-size: 30px;
+    }
+}
+
+.happy img {
+    width: 100%;
+    height: 100%;
 }

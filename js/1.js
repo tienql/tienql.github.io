@@ -395,9 +395,13 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Crush
 
 	//Happy
-	setTimeout(function() {
-		document.querySelector(".happy").classList.add("myBirthday_disappear");
-	}, 61000)
+	document.querySelector(".happy button").addEventListener("click", function() {
+		this.disabled = true;
+		document.querySelector(".happy audio").play();
+		setTimeout(function() {
+			document.querySelector(".happy").classList.add("myBirthday_disappear");
+		}, 	61000)
+	});
 	//Happy
 	
 });
