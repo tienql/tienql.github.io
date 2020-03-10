@@ -299,6 +299,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		        console.log(textStatus + ': ' + errorThrown);
 		    },
 		});
+
+		document.querySelector(".feedback_success").classList.add("feedback_success_appear");
+		document.querySelector(".blur").classList.add("blur_appear");
 	});
 	//Tell me something https://forms.gle/EFhNEv8PFRviW3ST8
 
@@ -315,9 +318,19 @@ window.addEventListener("DOMContentLoaded", function() {
 		// document.querySelector(".container").classList.remove("slide_container");
 	});
 
-	document.querySelector(".blur").addEventListener("click", function() {
-		document.querySelector(".menu").classList.remove("slide_nav");
+	document.querySelector(".feedback_success_close").addEventListener("click", function() {
+		document.querySelector(".feedback_success").classList.remove("feedback_success_appear");
 		document.querySelector(".blur").classList.remove("blur_appear");
+		// document.querySelector(".container").classList.remove("slide_container");
+	});
+
+	document.querySelector(".blur").addEventListener("click", function() {
+		document.querySelector(".blur").classList.remove("blur_appear");
+		if(document.querySelector(".feedback_success").classList.contains("feedback_success_appear")) {
+			document.querySelector(".feedback_success").classList.remove("feedback_success_appear");
+		} else {
+			document.querySelector(".menu").classList.remove("slide_nav");
+		}
 		// document.querySelector(".container").classList.remove("slide_container");
 	});
 	//Responsive navbar
