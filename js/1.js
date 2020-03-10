@@ -399,4 +399,5 @@ window.addEventListener("DOMContentLoaded", function() {
 		document.querySelector(".happy").classList.add("myBirthday_disappear");
 	}, 61000)
 	//Happy
+	
 });
