@@ -652,8 +652,8 @@ footer.footer {
 .submit i::after {
     content : "Tiên có thể vào mess để tìm lại tin nhắn nha!!!";
     position : absolute;
-    left : 50%;
-    top : 200%;
+    left: -233px;
+    top: 215%;
     transform : translateX(-50%) scale(0);
     color : #ffffff;
     transition : 0.4s;
