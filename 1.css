@@ -788,9 +788,8 @@ footer.footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
-    width: max-content;
+    width: 70%;
     height: 400px;
-    line-height: 400px;
     text-align: center;
     font-size: 40px;
     background-color: #34495e;
@@ -798,6 +797,10 @@ footer.footer {
     border-radius: 20px;
     padding: 0 10px;
     color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .feedback_success_appear {
