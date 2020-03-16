@@ -345,9 +345,9 @@ h2.first_title {
     position: absolute;
     z-index: 10;
     background-color: #fbc531;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     color: #16a085;
 }
@@ -358,7 +358,7 @@ h2.first_title {
     background-color: #fbc531;
     top: 0;
     height: inherit;
-    line-height: 30px;
+    line-height: 40px;
     z-index: -1;
     left: 100%;
     transition: 0.4s;
@@ -650,7 +650,7 @@ footer.footer {
 }
 
 .submit i::after {
-    content : "TiÃªn cÃ³ thá»ƒ lÃªn messenger Ä‘á»ƒ tÃ¬m láº¡i tin nháº¯n.";
+    content : "Tiên có thể vào mess để tìm lại tin nhắn nha!!!";
     position : absolute;
     left : 50%;
     top : 200%;
@@ -815,4 +815,41 @@ footer.footer {
     color: #dcdde1;
     display: inline-block;
     cursor: pointer;
+}
+
+.draggable.bubble::after {
+    content: "Muốn nghe nhac thì ấn vào đây nè Tiên!!!";
+    top: -137%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    position: absolute;
+    width: max-content;
+    background-color: #34495e;
+    padding: 5px;
+    color: #ecf0f1;
+    font-size: 20px;
+    animation: hm 3s alternate infinite;
+}
+
+@keyframes hm {
+    from {
+        transform: translateX(-50%) scale(0);
+    }
+    to {
+        transform: translateX(-50%) scale(1);     
+    }
+}
+
+.draggable.bubble::before {
+    content: "Tiên có thể dùng chuột ấn vào chô màu vàng để kéo nó đi đâu cũng được!!!";
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    position: absolute;
+    width: 270px;
+    background-color: #34495e;
+    padding: 5px;
+    color: #ecf0f1;
+    font-size: 20px;
+    animation: hm 3s alternate infinite;
 }

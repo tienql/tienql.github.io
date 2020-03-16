@@ -167,7 +167,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	audioPlayBtn.addEventListener("click", function() {
 		if(this.classList.contains("fa-play")) {
-			
+			document.querySelector(".draggable").classList.remove("bubble");
 			enableAutoplay(null);
 		} else {
 			
@@ -394,6 +394,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	//Crush
 	document.querySelector(".crush button").addEventListener("click", function() {
+		this.disabled = true;
 		document.querySelector(".crush .video_blur").classList.add("myBirthday_disappear");
 		document.querySelector(".crush video").play();
 
@@ -411,9 +412,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	document.querySelector(".happy button").addEventListener("click", function() {
 		this.disabled = true;
 		document.querySelector(".happy audio").play();
-		setTimeout(function() {
+		document.querySelector(".happy audio").addEventListener("ended", function() {
 			document.querySelector(".happy").classList.add("myBirthday_disappear");
-		}, 	61000)
+		});
 	});
 	//Happy
 	
